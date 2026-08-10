@@ -1,0 +1,216 @@
+\documentclass[12pt]{article}
+\usepackage{fix-cm}
+
+\usepackage[a4paper,
+            top=3cm, bottom=2cm,
+            left=3cm, right=2cm]{geometry}
+
+\usepackage[num, overcite]{abntex2cite}
+\citebrackets[]
+\makeatletter
+\renewcommand\@biblabel[1]{[#1] }
+\makeatother
+
+
+
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{amsmath, amsfonts, amsthm, bm}
+\usepackage{newtxtext, newtxmath, mathtools}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{icomma}
+\usepackage{array}
+\usepackage{float}
+\usepackage{tikz}
+
+\usepackage{silence}
+\WarningFilter{latex}{Command \showhyphens has changed}
+
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.4\baselineskip}
+\justifying
+
+\usepackage{titlesec}
+
+\newcommand{\titlefix}{
+  \hyphenpenalty=10000
+  \exhyphenpenalty=10000
+  \emergencystretch=2em
+}
+
+\captionsetup{
+    justification=centering
+}
+
+\titleformat{\section}
+{\normalsize\bfseries\titlefix}
+{\thesection.}
+{0.5em}
+{}
+
+\titlespacing*{\section}
+{0.75cm}
+{1.5\baselineskip}
+{0.8\baselineskip}
+
+\titleformat{\subsection}
+{\normalsize\bfseries\titlefix}
+{\thesubsection.}
+{0.5em}
+{}
+
+\titlespacing*{\subsection}
+{1.5cm}
+{1.2\baselineskip}
+{0.6\baselineskip}
+
+\titleformat{\subsubsection}
+{\normalsize\bfseries\titlefix}
+{\thesubsubsection.}
+{0.5em}
+{}
+
+\titlespacing*{\subsubsection}
+{2.25cm}
+{1.0\baselineskip}
+{0.4\baselineskip}
+
+\titleformat{name=\section,numberless}
+{\normalsize\bfseries\centering\titlefix}
+{}
+{0em}
+{}
+
+\titlespacing*{name=\section,numberless}
+{0cm}
+{1.5\baselineskip}
+{0.8\baselineskip}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+
+	\includegraphics[width=0.3\textwidth]{ita_rgb.jpg}
+
+	\vfill
+
+	{\large\bfseries
+		Um experimento sobre a distribuição binomial\\[2.0\baselineskip]
+	}
+
+	\vfill
+
+	{\normalsize\bfseries
+		Caio Schaden Ishida\\[0.5\baselineskip]
+		Felipe Osternes da Silva\\[0.5\baselineskip]
+		João Victor Evers Cordeiro\\[0.5\baselineskip]
+		Paulo Vinícius Rodrigues Azevedo\\[0.5\baselineskip]
+		Rafael Sakata Suzuki\\[0.5\baselineskip]
+	}
+
+	\vfill
+
+	{\normalsize\bfseries
+		Grupo nº 01\\[0.6\baselineskip]
+		Turma 30.2
+	}
+
+	\vfill
+
+	{\normalsize
+		Professores\\[0.5\baselineskip]
+		Prof. Marco Antonio Ridenti (coord.)\\[0.5\baselineskip]
+		Prof. Amós Silva\\[0.5\baselineskip]
+		Profa. Sônia Guimarães\\[0.5\baselineskip]
+		Prof. Filipe Matusalém\\[0.5\baselineskip]
+		Prof. Bogos Sismanoglu\\[0.5\baselineskip]
+		Data de entrega: 13/08/2026
+	}
+
+	\vfill
+
+	{\normalsize\bfseries
+		Departamento de Física\\
+		Divisão de Ciências Fundamentais\\
+		Instituto Tecnológico de Aeronáutica - ITA
+	}
+
+\end{center}
+
+\newpage
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setcounter{page}{1}
+
+\section{Objetivos}
+O objetivo principal desse experimento foi a comparação dos valores previstos pelo modelo teórico de uma distribuição de probabilidade binomial
+com os dados obtidos após sucessivos ensaios de Bernoulli,
+
+\newpage
+
+\section{Procedimento experimental}
+Foram utilizados 24 dados cúbicos não-enviesados e cada dado possuía cinco faces vermelhas e uma face azul. Cada estudante realizou 20 lançamentos desse conjunto de dados sobre uma caixa de papelão grande, totalizando 100 lançamentos. Após cada lançamento, foi contabilizada a quantidade de dados cujas faces azuis estavam viradas para cima. 
+\newpage
+
+\section{Resultados}
+	A Tabela \ref{tabela:experimentos} mostra a quantidade de vezes que a face azul aparece em cada experimento.
+\begin{table}[h!]
+\centering
+\begin{tabular}{c c c c c c} 
+ \hline
+ experimento & aluno 1 & aluno 2 & aluno 3 & aluno 4 & aluno 5 \\ [0.5ex] 
+ \hline
+ 1 & 5 & 3 & 3 & 3 & 2\\
+2 & 4 & 8 & 0 & 4 & 4\\
+3 & 5 & 3 & 5 & 1 & 3\\
+4 & 1 & 4 & 4 & 7 & 6\\
+5 & 4 & 5 & 7 & 3 & 4\\
+6 & 2 & 5 & 4 & 3 & 4\\
+7 & 1 & 3 & 4 & 5 & 4\\
+8 & 3 & 3 & 2 & 7 & 4\\
+9 & 6 & 4 & 6 & 2 & 2\\
+10 & 4 & 5 & 5 & 7 & 4\\
+11 & 5 & 2 & 5 & 3 & 4\\
+12 & 2 & 4 & 4 & 5 & 3\\
+13 & 5 & 2 & 6 & 6 & 3\\
+14 & 3 & 5 & 2 & 3 & 4\\
+15 & 10 & 4 & 3 & 6 & 1\\
+16 & 8 & 6 & 3 & 3 & 5\\
+17 & 2 & 3 & 6 & 3 & 3\\
+18 & 3 & 2 & 4 & 1 & 2\\
+19 & 3 & 1 & 3 & 5 & 3\\
+20 & 4 & 3 & 4 & 7 & 2\\ [1ex] 
+ \hline
+\end{tabular}
+\caption{Número de vezes em que foram observados os resultados “face
+azul” em um lançamento de 24 dados de cinco faces vermelhas e uma
+azul. A primeira coluna designa o número do lançamento e as colunas
+ao lado o resultado observado pelo aluno.}
+\label{tabela:experimentos}
+\end{table}
+
+\newpage
+
+\section{Discussão}
+
+\newpage
+
+\section{Referências bibliográficas}
+%\begingroup
+%\bibliography{referencias_sintese1}
+%\endgroup
+
+\end{document}
