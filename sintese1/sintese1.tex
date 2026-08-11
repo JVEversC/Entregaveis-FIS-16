@@ -156,8 +156,11 @@
 \setcounter{page}{1}
 
 \section{OBJETIVOS}
-O objetivo principal desse experimento foi a comparação e análise dos valores previstos pelo modelagem do resultado de lançamentos sucessivos de dados como uma
-distribuição de probabilidade binomial com os valores numéricos obtidos após repetidos ensaios de Bernoulli.
+O objetivo principal desse experimento foi a comparação e análise dos valores previstos pelo modelagem do resultado de lançamentos sucessivos de dados como uma distribuição de probabilidade binomial com os valores numéricos obtidos após repetidos ensaios de Bernoulli. Na modelagem desse problema, a probabilidade de sucesso será $p = \frac{1}{6}$, correspondente à probabilidade de obter a face específica do dado que está pintada de azul, enquanto a de fracasso será $(1 - p) = 5/6$. Sendo assim, a probabilidade de obter $n$ faces azuis em $N$ lançamentos é dada pela distribuição binomial da Equação \ref{eq:distbin}\cite{vuolo2019}.
+
+\begin{equation}\label{eq:distbin}
+P(n) = \binom{N}{n}p^n(1-p)^{N-n}
+\end{equation}
 
 \newpage
 
@@ -237,11 +240,11 @@ São calculados e registrados na Tabela \ref{tab:medias} os desvios padrão e as
 	\label{tab:medias}
 \end{table}
 
-O histograma apresentado na Figura \ref{fig:histograma} mostra a contagem experimental das faces azuis,
-com os pontos pretos sendo os valores esperados para uma distribuição binomial.
+A Figura \ref{fig:histograma} é o histograma que compara a contagem experimental das faces azuis com os valores teóricos esperados para uma distribuição binomial, segundo a Equação \ref{eq:distbin}.
+
 \begin{figure}[h!]
   \centering
-  \caption{Histograma da frequência de ocorrência de n “faces azuis”. 
+  \caption{Histograma da frequência de ocorrência de $n$ “faces azuis”. 
   Os pontos em preto são os valores esperados de uma distribuição
    binomial com p = 1/6.}
   \includegraphics[width=0.8\textwidth]{Histograma_v3.png}
