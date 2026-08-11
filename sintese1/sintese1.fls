@@ -372,6 +372,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
+INPUT ./sintese1.bbl
+INPUT ./sintese1.bbl
+INPUT sintese1.bbl
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
@@ -397,3 +402,4 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb

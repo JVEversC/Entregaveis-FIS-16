@@ -1,5 +1,14 @@
 # Fdb version 4
-["pdflatex"] 1786313472.71042 "sintese1.tex" "sintese1.pdf" "sintese1" 1786313473.96001 0
+["bibtex sintese1"] 1786450565.81193 "sintese1.aux" "sintese1.bbl" "sintese1" 1786450664.47602 0
+  "./referencias_sintese1.bib" 1786446587.46506 160 cf13a37e2bb26cc8adc050d16e7eda7e ""
+  "/usr/share/texlive/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1357081713 5396 4eb260dac60f150ae608d45252853090 ""
+  "/usr/share/texlive/texmf-dist/bibtex/bst/abntex2/abntex2-num.bst" 1543183680 60065 0bf58df5e47e1a6c21c910ec88a893f4 ""
+  "sintese1.aux" 1786450663.86727 2721 b8b301da8d76e769a2a2e49d2f9a3a08 "pdflatex"
+  (generated)
+  "sintese1.bbl"
+  "sintese1.blg"
+  (rewritten before read)
+["pdflatex"] 1786450662.65149 "sintese1.tex" "sintese1.pdf" "sintese1" 1786450664.47626 0
   "/etc/texmf/web2c/texmf.cnf" 1786207560.62194 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1698694482 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -18,6 +27,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm" 1572128992 1408 ef71a9098da4d5a1a85b5920860b6731 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm" 1698694482 11576 2c5382fb8ab907c80b8ce60923e4c09a ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm" 1698694482 11540 3e196d34de484a386065c6c3b6e4dc74 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1.tfm" 1600636029 3008 ca0c83ca288d9f1c5d2fca0e8e268f10 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm" 1690487162 3056 db59b44fb00cc29b676bd92c4dc6750f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm" 1698694482 11592 bf4aeee76faffbe00698e903a615f219 ""
@@ -42,6 +52,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb" 1699567298 45943 7899c7ea4fdd83f3625178689816dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb" 1698694482 255251 958c6ad4e5518904a53cf1118c612893 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb" 1698694482 286816 82db2bfe6920054b1a43661c07078412 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb" 1698694482 248316 6c047e35119cde1bffb3263909816feb ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf" 1583272976 956 44be8e0aea9c6d145fc21c9948a6b4b5 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntxexx.vf" 1699567298 1716 73c8d39d4c3ace9ec98a8f066bb3b494 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntxmi.vf" 1622581641 2612 4fd3785b7e98639f68f908a08c642071 ""
@@ -210,8 +221,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1786207590.1065 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1786207710 8213327 12a1b0d57975c404b454a3828a868a6e ""
   "ita_rgb.jpg" 1786103905.73234 657741 afbffabc5cf4aa8d70c89d76bbd5f322 ""
-  "sintese1.aux" 1786313473.83124 1632 5ab0a9bdb31cb9b398de03c6b6916d1d "pdflatex"
-  "sintese1.tex" 1786313471.81368 6169 a8cb714520817087e010d5ed93301e27 ""
+  "sintese1.aux" 1786450663.86727 2721 b8b301da8d76e769a2a2e49d2f9a3a08 "pdflatex"
+  "sintese1.bbl" 1786450565.96008 351 b231a8920e8b0b019a0c5c8af78153f6 "bibtex sintese1"
+  "sintese1.tex" 1786450663.19064 9112 e842f47bd48bffc1e772e605ff46e9c5 ""
   (generated)
   "sintese1.aux"
   "sintese1.log"
