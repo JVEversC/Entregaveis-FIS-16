@@ -1,5 +1,5 @@
 # Fdb version 4
-["bibtex sintese1"] 1786450565.81193 "sintese1.aux" "sintese1.bbl" "sintese1" 1786450664.47602 0
+["bibtex sintese1"] 1786450913.85787 "sintese1.aux" "sintese1.bbl" "sintese1" 1786450914.01032 0
   "./referencias_sintese1.bib" 1786446587.46506 160 cf13a37e2bb26cc8adc050d16e7eda7e ""
   "/usr/share/texlive/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1357081713 5396 4eb260dac60f150ae608d45252853090 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/abntex2/abntex2-num.bst" 1543183680 60065 0bf58df5e47e1a6c21c910ec88a893f4 ""
@@ -8,7 +8,7 @@
   "sintese1.bbl"
   "sintese1.blg"
   (rewritten before read)
-["pdflatex"] 1786450662.65149 "sintese1.tex" "sintese1.pdf" "sintese1" 1786450664.47626 0
+["pdflatex"] 1786450662.65149 "sintese1.tex" "sintese1.pdf" "sintese1" 1786450914.01045 0
   "/etc/texmf/web2c/texmf.cnf" 1786207560.62194 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1698694482 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -222,7 +222,7 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1786207710 8213327 12a1b0d57975c404b454a3828a868a6e ""
   "ita_rgb.jpg" 1786103905.73234 657741 afbffabc5cf4aa8d70c89d76bbd5f322 ""
   "sintese1.aux" 1786450663.86727 2721 b8b301da8d76e769a2a2e49d2f9a3a08 "pdflatex"
-  "sintese1.bbl" 1786450565.96008 351 b231a8920e8b0b019a0c5c8af78153f6 "bibtex sintese1"
+  "sintese1.bbl" 1786450914.00133 351 b231a8920e8b0b019a0c5c8af78153f6 "bibtex sintese1"
   "sintese1.tex" 1786450663.19064 9112 e842f47bd48bffc1e772e605ff46e9c5 ""
   (generated)
   "sintese1.aux"
