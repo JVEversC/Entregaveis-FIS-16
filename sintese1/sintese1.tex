@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt, a4paper, brazil]{article}
 \usepackage{fix-cm}
 
 \usepackage[a4paper,
@@ -166,12 +166,56 @@ Foram
 \newpage
 
 \section{Resultados}
+<<<<<<< HEAD
 A Tabela \ref{tabela:experimentos} mostra a quantidade de faces azuis que aparecem em cada experimento para cada aluno.
 \begin{table}[h!]
+\centering
+\begin{tabular}{c c c c c c}
+	\hline
+	experimento & aluno 1 & aluno 2 & aluno 3 & aluno 4 & aluno 5 \\ [0.5ex]
+	\hline
+	1           & 5       & 3       & 3       & 3       & 2       \\
+	2           & 4       & 8       & 0       & 4       & 4       \\
+	3           & 5       & 3       & 5       & 1       & 3       \\
+	4           & 1       & 4       & 4       & 7       & 6       \\
+	5           & 4       & 5       & 7       & 3       & 4       \\
+	6           & 2       & 5       & 4       & 3       & 4       \\
+	7           & 1       & 3       & 4       & 5       & 4       \\
+	8           & 3       & 3       & 2       & 7       & 4       \\
+	9           & 6       & 4       & 6       & 2       & 2       \\
+	10          & 4       & 5       & 5       & 7       & 4       \\
+	11          & 5       & 2       & 5       & 3       & 4       \\
+	12          & 2       & 4       & 4       & 5       & 3       \\
+	13          & 5       & 2       & 6       & 6       & 3       \\
+	14          & 3       & 5       & 2       & 3       & 4       \\
+	15          & 10      & 4       & 3       & 6       & 1       \\
+	16          & 8       & 6       & 3       & 3       & 5       \\
+	17          & 2       & 3       & 6       & 3       & 3       \\
+	18          & 3       & 2       & 4       & 1       & 2       \\
+	19          & 3       & 1       & 3       & 5       & 3       \\
+	20          & 4       & 3       & 4       & 7       & 2       \\ [1ex]
+	\hline
+\end{tabular}
+\caption{Número de vezes em que foram observados os resultados “face
+	azul” em um lançamento de 24 dados de cinco faces vermelhas e uma
+	azul. A primeira coluna designa o número do lançamento e as colunas
+	ao lado o resultado observado pelo aluno.}
+\label{tabela:experimentos}
+=======
+
+A Tabela \ref{tab:experimentos} registra a quantidade de faces azuis obtidas em cada um dos experimentos organizada com base nos resultados dos vinte lançamentos de cada um dos cinco alunos.
+
+\begin{table}[h!]
 	\centering
+
+	\caption{Número de vezes em que foram observados os resultados “face
+		azul” em um lançamento de 24 dados de cinco faces vermelhas e uma
+		azul. A primeira coluna designa o número do lançamento e as colunas
+		ao lado o resultado observado pelo aluno.}
+
 	\begin{tabular}{c c c c c c}
 		\hline
-		experimento & aluno 1 & aluno 2 & aluno 3 & aluno 4 & aluno 5 \\ [0.5ex]
+		Experimento & Aluno 1 & Aluno 2 & Aluno 3 & Aluno 4 & Aluno 5 \\
 		\hline
 		1           & 5       & 3       & 3       & 3       & 2       \\
 		2           & 4       & 8       & 0       & 4       & 4       \\
@@ -192,18 +236,17 @@ A Tabela \ref{tabela:experimentos} mostra a quantidade de faces azuis que aparec
 		17          & 2       & 3       & 6       & 3       & 3       \\
 		18          & 3       & 2       & 4       & 1       & 2       \\
 		19          & 3       & 1       & 3       & 5       & 3       \\
-		20          & 4       & 3       & 4       & 7       & 2       \\ [1ex]
+		20          & 4       & 3       & 4       & 7       & 2       \\
 		\hline
 	\end{tabular}
-	\caption{Número de vezes em que foram observados os resultados “face
-		azul” em um lançamento de 24 dados de cinco faces vermelhas e uma
-		azul. A primeira coluna designa o número do lançamento e as colunas
-		ao lado o resultado observado pelo aluno.}
-	\label{tabela:experimentos}
+	\label{tab:experimentos}
+	>>>>>>> a05b37456bf8f34de7e8f3e954cee10d9e6a1917
 \end{table}
 
-A Tabela \ref{tabela:medias} apresenta sa médias e os desvios padrões de cada aluno.
+São calculados e registrados na Tabela \ref{tab:medias} os desvios padrão e as médias\cite{vuolo1996fundamentos} referentes ao conjuntos de dados obtidos por cada um dos cinco alunos e ao conjunto de dados total.
+
 \begin{table}[h!]
+	<<<<<<< HEAD
 	\centering
 	\begin{tabular}{c c c}
 		\hline
@@ -225,6 +268,32 @@ A Tabela \ref{tabela:medias} apresenta sa médias e os desvios padrões de cada 
 		uma distribuição binomial, calculados como $x_0 = Np$ e
 		$\sigma_0 = \sqrt{Np(p-1)}$, com $p = 1/6$.}
 	\label{tabela:medias}
+	=======
+	\centering
+
+	\caption{Média e desvio padrão dos resultados dos vinte lançamentos
+		de cada aluno, média e desvio padrão contabilizando todos os
+		lançamentos. A tabela também mostra o valor esperado $x_0$ e $\sigma_0$ de
+		uma distribuição binomial, que são $x_0 = Np$ e
+		$\sigma_0 = \sqrt{Np(p-1)}$, com $p = 1/6$.}
+
+	\begin{tabular}{c c c}
+		\hline
+		Aluno    & $\bar{x}$ & $\sigma$ \\
+		\hline
+		1        & 4,0       & 2,22     \\
+		2        & 3,75      & 1,62     \\
+		3        & 4,0       & 1,65     \\
+		4        & 4,2       & 1,99     \\
+		5        & 3,35      & 1,18     \\
+		\hline
+		total    & 3,86      & 1,76     \\
+		esperado & 4,0       & 1,8      \\
+		\hline
+	\end{tabular}
+
+	\label{tab:medias}
+
 \end{table}
 
 \newpage
@@ -234,8 +303,8 @@ A Tabela \ref{tabela:medias} apresenta sa médias e os desvios padrões de cada 
 \newpage
 
 \section{Referências bibliográficas}
-%\begingroup
-%\bibliography{referencias_sintese1}
-%\endgroup
+\begingroup
+\bibliography{referencias_sintese1}
+\endgroup
 
 \end{document}
