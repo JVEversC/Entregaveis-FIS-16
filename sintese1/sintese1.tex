@@ -156,11 +156,8 @@
 \setcounter{page}{1}
 
 \section{OBJETIVOS}
-O objetivo principal desse experimento foi a comparação e análise dos valores previstos pelo modelagem do resultado de lançamentos sucessivos de dados como uma distribuição de probabilidade binomial com os valores numéricos obtidos após repetidos ensaios de Bernoulli. Na modelagem desse problema, a probabilidade de sucesso será $p = \frac{1}{6}$, correspondente à probabilidade de obter a face específica do dado que está pintada de azul, enquanto a de fracasso será $(1 - p) = 5/6$. Sendo assim, a probabilidade de obter $n$ faces azuis em $N$ lançamentos é dada pela distribuição binomial da Equação \ref{eq:distbin}\cite{vuolo2019}.
-
-\begin{equation}\label{eq:distbin}
-P(n) = \binom{N}{n}p^n(1-p)^{N-n}
-\end{equation}
+O objetivo principal desse experimento foi a comparação e análise dos valores previstos pelo modelagem do resultado de lançamentos sucessivos de dados como uma
+distribuição de probabilidade binomial com os valores numéricos obtidos após repetidos ensaios de Bernoulli.
 
 \newpage
 
@@ -224,36 +221,73 @@ São calculados e registrados na Tabela \ref{tab:medias} os desvios padrão e as
 		\hline
 		Aluno    & $\bar{x}$ & $\sigma$ \\ [0.5ex]
 		\hline
-		1        & 4,0       & 2,22     \\
+		1        & 4,00      & 2,22     \\
 		2        & 3,75      & 1,62     \\
-		3        & 4,0       & 1,65     \\
-		4        & 4,2       & 1,99     \\
+		3        & 4,00      & 1,65     \\
+		4        & 4,20      & 1,99     \\
 		5        & 3,35      & 1,18     \\ 
 
 		\hline
 
 		Total    & 3,86      & 1,76     \\
-		Esperado & 4,0       & 1,8      \\ 
+		Esperado & 4,00      & 1,80     \\ 
 
 		\hline
 	\end{tabular}
 	\label{tab:medias}
 \end{table}
 
-A Figura \ref{fig:histograma} é o histograma que compara a contagem experimental das faces azuis com os valores teóricos esperados para uma distribuição binomial, segundo a Equação \ref{eq:distbin}.
-
+O histograma apresentado na Figura \ref{fig:histograma} mostra a contagem experimental das faces azuis,
+com os pontos pretos sendo os valores esperados para uma distribuição binomial.
 \begin{figure}[h!]
   \centering
-  \caption{Histograma da frequência de ocorrência de $n$ “faces azuis”. 
+  \caption{Histograma da frequência de ocorrência de n “faces azuis”. 
   Os pontos em preto são os valores esperados de uma distribuição
    binomial com p = 1/6.}
-  \includegraphics[width=\textwidth]{Histograma_v3.png}
+  \includegraphics[width=0.8\textwidth]{Histograma_v3.png}
   \label{fig:histograma}
 \end{figure}
 
 \newpage
-
 \section{DISCUSSÃO}
+
+Com base nos resultados apresentados na seção anterior, é possível comparar os resultados obtidos pelos diferentes estudantes e avaliá-los em relação aos valores previstos pelo modelo de distribuição binomial. A Tabela~\ref{tab:mediasepm} apresenta para cada estudante, a média $\bar{x}$, o erro padrão da média ($\mathrm{EPM}$) e a diferença entre a média experimental e o valor esperado, expressa em unidades do erro padrão da média esperado, $\mathrm{EPM}_0$.
+
+Para uma distribuição binomial com $p=1/6$, os valores esperados são dados por $x_0=Np$ e $\mathrm{EPM}_0=\sqrt{p(1-p)}$. Assim, para $N=24$, obtém-se $x_0=4,00$ e $\mathrm{EPM}_0=0,372$.
+
+\begin{table}[ht!]
+
+\centering
+\caption{Média, erro padrão da média e erro dos resultados de cada aluno, de todo o grupo e dos valores esperados}
+\begin{tabular}{c c c c}
+	\hline
+	Aluno    & $\bar{x}$ & $\mathrm{EPM}$ & $\left(\bar{x}-\left<x\right>\right)/\mathrm{EPM}_0$ \\ [0.5ex]
+	\hline
+	1        & 4,00      & 0,496 & 0,00   \\
+	2        & 3,75      & 0,362 & $-$0,67   \\
+	3        & 4,00      & 0,369 & 0,00   \\
+	4        & 4,20      & 0,445 & 0,53   \\
+	5        & 3,35      & 0,264 & $-$1,75   \\ 
+
+	\hline
+
+	Total    & 3,86      & 0,394 & $-$0,78   \\
+	Esperado & 4,00      & 0,372 & --   \\ 
+
+	\hline
+\end{tabular}
+\label{tab:mediasepm}
+
+
+\end{table}
+
+Os valores experimentais de $\bar{x}$ apresentam boa concordância com o valor esperado. As médias dos alunos 1 e 3 coincidem com o valor esperado, enquanto as médias dos alunos 2, 4 e 5 diferem de $x_0$ em, respectivamente, $-0,67$, $+0,53$ e $-1,75$ unidades de $\mathrm{EPM}_0$. Para o conjunto dos estudantes, obtém-se $\bar{x}=3,86$, correspondendo a uma diferença de $-0,78\times\mathrm{EPM}_0$ em relação ao valor esperado. Portanto, nenhuma das diferenças observadas entre as médias experimentais e o valor esperado excede duas vezes o erro padrão esperado, indicando uma concordância razoável entre os resultados experimentais e a previsão do modelo.
+
+A dispersão das médias também apresenta valores próximos da previsão teórica. Os EPMs obtidos para os estudantes variam entre $0,264$ e $0,496$, enquanto o valor esperado é $0,372$. Como o erro padrão da média está relacionado ao desvio padrão pela expressão
+$\mathrm{EPM}=\sigma/\sqrt{n},$ a comparação dos EPMs também fornece informação sobre a dispersão dos resultados, desde que o número de observações $n$ seja o mesmo para as diferentes estimativas. Nesse sentido, os valores experimentais não apresentam discrepâncias acentuadas em relação ao valor esperado.
+
+Além disso, observa-se pela Figura \ref{fig:histograma} que a distribuição experimental possui um bom ajuste com a previsão teórica da distribuição binomial. % TODO: Isso pode ser expandido?
+
 
 \newpage
 
