@@ -211,12 +211,7 @@ A Tabela \ref{tab:experimentos} registra a quantidade de faces azuis obtidas em 
 
 \end{table}
 
-<<<<<<< HEAD
-São calculados e registrados na Tabela \ref{tab:medias}os
-dias\cite{vuolo1996fundamentos} referentes ao conjuntos de dados obtidos por cada um dos cinco alunos e ao conjunto de dados total.
-=======
 São calculados e registrados na Tabela \ref{tab:medias} os desvios padrão e as médias\cite{vuolo2019} referentes ao conjuntos de dados obtidos por cada um dos cinco alunos e ao conjunto de dados total.
->>>>>>> 4ea9d241915a815da4084d96925f13ea117077c7
 
 \begin{table}[ht!]
 
@@ -244,7 +239,7 @@ São calculados e registrados na Tabela \ref{tab:medias} os desvios padrão e as
 \end{table}
 
 A Figura \ref{fig:histograma} é o histograma que compara a contagem experimental das faces azuis com os valores teóricos esperados para uma distribuição binomial, segundo a Equação \ref{eq:distbin}.
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\caption{Histograma da frequência de ocorrência de $n$ “faces azuis”.
 		Os pontos em preto são os valores esperados de uma distribuição
@@ -256,42 +251,39 @@ A Figura \ref{fig:histograma} é o histograma que compara a contagem experimenta
 \newpage
 \section{DISCUSSÃO}
 
-Com base nos resultados apresentados na seção anterior, é possível comparar os resultados obtidos pelos diferentes estudantes e avaliá-los em relação aos valores previstos pelo modelo de distribuição binomial. A Tabela~\ref{tab:mediasepm} apresenta para cada estudante, a média $\bar{x}$, o erro padrão da média ($\mathrm{EPM}$) e a diferença entre a média experimental e o valor esperado, expressa em unidades do erro padrão da média esperado, $\mathrm{EPM}_0$.
+Com base nos resultados apresentados na seção anterior, é possível comparar os resultados obtidos pelos diferentes estudantes e avaliá-los em relação aos valores previstos pelo modelo de distribuição binomial. A Tabela~\ref{tab:mediasepm} apresenta, para cada estudante, a média $\bar{x}$, o desvio padrão e a diferença entre a média experimental e o valor esperado, em unidades do desvio padrão esperado, denotado por $\sigma_0$. Esse valor será utilizado para descrever, de maneira aproximada, o quão próximos os valores da média estão do esperado.\cite{vuolo2019}
 
-Para uma distribuição binomial com $p=1/6$, os valores esperados são dados por $x_0=Np$ e $\mathrm{EPM}_0=\sqrt{p(1-p)}$. Assim, para $N=24$, obtém-se $x_0=4,00$ e $\mathrm{EPM}_0=0,372$.
+\begin{table}[H]
 
-\begin{table}[ht!]
+\centering
+\caption{Média, desvio padrão e erro dos resultados de cada aluno, de todo o grupo e dos valores esperados.}
+\begin{tabular}{c c c c}
+	\hline
+	Aluno    & $\bar{x}$ & $\mathrm{\sigma}$ & $\left(\bar{x}-x_0\right)/\mathrm{\sigma}_0$ \\ [0.5ex]
+	\hline
+	1        & 4,00      & 2,22          & 0,00   \\
+	2        & 3,75      & 1,62          & $-$0,14 \\
+	3        & 4,00      & 1,65          & 0,00   \\
+	4        & 4,20      & 1,99          & 0,11   \\
+	5        & 3,35      & 1,18          & $-$0,36 \\ 
 
-	\centering
-	\caption{Média, erro padrão da média e erro dos resultados de cada aluno, de todo o grupo e dos valores esperados}
-	\begin{tabular}{c c c c}
-		\hline
-		Aluno    & $\bar{x}$ & $\mathrm{EPM}$ & $\left(\bar{x}-\left<x\right>\right)/\mathrm{EPM}_0$ \\ [0.5ex]
-		\hline
-		1        & 4,00      & 0,496          & 0,00                                                 \\
-		2        & 3,75      & 0,362          & $-$0,67                                              \\
-		3        & 4,00      & 0,369          & 0,00                                                 \\
-		4        & 4,20      & 0,445          & 0,53                                                 \\
-		5        & 3,35      & 0,264          & $-$1,75                                              \\
+	\hline
 
-		\hline
+	Total    & 3,86      & 1,76          & $-$0,08 \\
+	Esperado & 4,00      & 1,83          & --   \\ 
 
-		Total    & 3,86      & 0,394          & $-$0,78                                              \\
-		Esperado & 4,00      & 0,372          & --                                                   \\
-
-		\hline
-	\end{tabular}
-	\label{tab:mediasepm}
-
+	\hline
+\end{tabular}
+\label{tab:mediasepm}
 
 \end{table}
 
-Os valores experimentais de $\bar{x}$ apresentam boa concordância com o valor esperado. As médias dos alunos 1 e 3 coincidem com o valor esperado, enquanto as médias dos alunos 2, 4 e 5 diferem de $x_0$ em, respectivamente, $-0,67$, $+0,53$ e $-1,75$ unidades de $\mathrm{EPM}_0$. Para o conjunto dos estudantes, obtém-se $\bar{x}=3,86$, correspondendo a uma diferença de $-0,78\times\mathrm{EPM}_0$ em relação ao valor esperado. Portanto, nenhuma das diferenças observadas entre as médias experimentais e o valor esperado excede duas vezes o erro padrão esperado, indicando uma concordância razoável entre os resultados experimentais e a previsão do modelo.
+Os valores experimentais de $\bar{x}$ apresentam boa concordância com o valor esperado. As médias dos alunos 1 e 3 coincidem com o valor esperado, enquanto as médias dos alunos 2, 4 e 5 diferem de $x_0$ em, respectivamente, $-0,14$, $+0,11$ e $-0,36$ unidades de $\mathrm{\sigma}_0$. Para o conjunto dos estudantes, obtém-se $\bar{x}=3,86$, correspondendo a uma diferença de $-0,08$ unidades de $\mathrm{\sigma}_0$ em relação ao valor esperado. Portanto, observa-se uma boa concordância entre os resultados experimentais e a previsão do modelo.
 
-A dispersão das médias também apresenta valores próximos da previsão teórica. Os EPMs obtidos para os estudantes variam entre $0,264$ e $0,496$, enquanto o valor esperado é $0,372$. Como o erro padrão da média está relacionado ao desvio padrão pela expressão
-$\mathrm{EPM}=\sigma/\sqrt{n},$ a comparação dos EPMs também fornece informação sobre a dispersão dos resultados, desde que o número de observações $n$ seja o mesmo para as diferentes estimativas. Nesse sentido, os valores experimentais não apresentam discrepâncias acentuadas em relação ao valor esperado.
+A dispersão dos resultados também apresenta valores próximos da previsão teórica. Os valores de $\sigma$ obtidos para os estudantes variam entre $1,18$ e $2,22$, enquanto o valor esperado é $1,83$. Logo, os valores experimentais não apresentam discrepâncias acentuadas em relação ao valor esperado.
 
-Além disso, observa-se pela Figura \ref{fig:histograma} que a distribuição experimental possui um bom ajuste com a previsão teórica da distribuição binomial. % TODO: Isso pode ser expandido?
+Além disso, observa-se pela Figura~\ref{fig:histograma} que a distribuição experimental apresenta boa concordância qualitativa com a previsão teórica da distribuição binomial, evidenciando o comportamento esperado para o experimento.
+
 
 
 \newpage
