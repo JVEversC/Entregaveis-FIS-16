@@ -1,0 +1,177 @@
+\documentclass[12pt, a4paper, brazil]{article}
+\usepackage{fix-cm}
+
+\usepackage[a4paper,
+            top=3cm, bottom=2cm,
+            left=3cm, right=2cm]{geometry}
+
+\usepackage[num, overcite]{abntex2cite}
+\citebrackets[]
+\makeatletter
+\renewcommand\@biblabel[1]{[#1] }
+\makeatother
+
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{amsmath, amsfonts, amsthm, bm}
+\usepackage{newtxtext, newtxmath, mathtools}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{icomma}
+\usepackage{array}
+\usepackage{float}
+\usepackage{tikz}
+
+\usepackage{silence}
+\WarningFilter{latex}{Command \showhyphens has changed}
+
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.4\baselineskip}
+\justifying
+
+\usepackage{titlesec}
+
+\newcommand{\titlefix}{
+  \hyphenpenalty=10000
+  \exhyphenpenalty=10000
+  \emergencystretch=2em
+}
+
+\captionsetup{
+    justification=centering
+}
+
+\titleformat{\section}
+{\normalsize\bfseries\titlefix}
+{\thesection.}
+{0.5em}
+{}
+
+\titlespacing*{\section}
+{0.75cm}
+{1.5\baselineskip}
+{0.8\baselineskip}
+
+\titleformat{\subsection}
+{\normalsize\bfseries\titlefix}
+{\thesubsection.}
+{0.5em}
+{}
+
+\titlespacing*{\subsection}
+{1.5cm}
+{1.2\baselineskip}
+{0.6\baselineskip}
+
+\titleformat{\subsubsection}
+{\normalsize\bfseries\titlefix}
+{\thesubsubsection.}
+{0.5em}
+{}
+
+\titlespacing*{\subsubsection}
+{2.25cm}
+{1.0\baselineskip}
+{0.4\baselineskip}
+
+\titleformat{name=\section,numberless}
+{\normalsize\bfseries\centering\titlefix}
+{}
+{0em}
+{}
+
+\titlespacing*{name=\section,numberless}
+{0cm}
+{1.5\baselineskip}
+{0.8\baselineskip}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+
+	\includegraphics[width=0.3\textwidth]{ita_rgb.jpg}
+
+	\vfill
+
+	{\large\bfseries
+		Um experimento sobre a distribuição binomial\\[2.0\baselineskip]
+	}
+
+	\vfill
+
+	{\normalsize\bfseries
+		Caio Schaden Ishida\\[0.5\baselineskip]
+		Felipe Osternes da Silva\\[0.5\baselineskip]
+		João Victor Evers Cordeiro\\[0.5\baselineskip]
+		Paulo Vinícius Rodrigues Azevedo\\[0.5\baselineskip]
+		Rafael Sakata Suzuki\\[0.5\baselineskip]
+	}
+
+	\vfill
+
+	{\normalsize\bfseries
+		Grupo nº 01\\[0.6\baselineskip]
+		Turma 30.2
+	}
+
+	\vfill
+
+	{\normalsize
+		Professores\\[0.5\baselineskip]
+		Prof. Marco Antonio Ridenti (coord.)\\[0.5\baselineskip]
+		Prof. Amós Silva\\[0.5\baselineskip]
+		Profa. Sônia Guimarães\\[0.5\baselineskip]
+		Prof. Filipe Matusalém\\[0.5\baselineskip]
+		Prof. Bogos Sismanoglu\\[0.5\baselineskip]
+		Data de entrega: 20/08/2026
+	}
+
+	\vfill
+
+	{\normalsize\bfseries
+		Departamento de Física\\
+		Divisão de Ciências Fundamentais\\
+		Instituto Tecnológico de Aeronáutica - ITA
+	}
+
+\end{center}
+
+\newpage
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setcounter{page}{1}
+
+\section{OBJETIVOS}
+O objetivo principal desse experimento foi a comparação e análise dos valores previstos pelo modelagem do resultado de lançamentos sucessivos de dados como uma distribuição de probabilidade binomial com os valores numéricos obtidos após repetidos ensaios de Bernoulli. Na modelagem desse problema, a probabilidade de sucesso será $p = \frac{1}{6}$, correspondente à probabilidade de obter a face específica do dado que está pintada de azul, enquanto a de fracasso será $(1 - p) = 5/6$. Sendo assim, a probabilidade de obter $n$ faces azuis em $N$ lançamentos é dada pela distribuição binomial da Equação \ref{eq:distbin}\cite{vuolo2019}.
+
+\begin{equation}\label{eq:distbin}
+	P(n) = \binom{N}{n}p^n(1-p)^{N-n}
+\end{equation}
+
+\section{PROCEDIMENTO EXPERIMENTAL}
+Foram utilizados 24 dados cúbicos não-enviesados, cada um com 5 faces vermelhas e 1 azul. Cada integrante do grupo realizou 20 lançamentos desse conjunto de dados com uma caixa de papelão sobre outra caixa maior, totalizando 100 lançamentos. Para cada um dos 100 lançamentos de 24 dados foi contabilizada a quantidade de faces azuis obtidas (casos de sucesso).
+
+\section{RESULTADOS}
+
+
+\newpage
+
+\clearpage
+\renewcommand{\refname}{}
+\section{REFERÊNCIAS}
+\vspace{-1.5\baselineskip}
+\bibliography{referencias_sintese1}
+
+\end{document}
