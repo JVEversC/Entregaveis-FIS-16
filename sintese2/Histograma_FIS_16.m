@@ -1,3 +1,7 @@
+clear;
+clc;
+close all;
+
 arquivos = {'dados_cb.txt', 'dados_cm.txt'};
 
 graf_min = 11.3;
@@ -5,10 +9,8 @@ graf_max = 12.1;
 
 for i = 1:length(arquivos)
 
-    T = readtable(arquivos{i});
-    T(1, :) = [];
-    data = T{:,1};
-
+    data = readmatrix(arquivos{k}, 'NumHeaderLines', 1);
+    
     n_exp = mean(data);
     sigma_expec = std(data);
 
