@@ -318,8 +318,8 @@ A Tabela \ref{tab:resultados} contém os valores e incertezas finais dos períod
 		\hline
 		$T^{(1)}\ \mathrm{(s)}$       & $1,174$  & 0,012     \\
 		$T^{(2)}\ \mathrm{(s)}$       & $1,172$  & 0,012     \\
-		$g^{(1)}\ \mathrm{(m/s^{2})}$ & $10,025$ & 0,148     \\
-		$g^{(2)}\ \mathrm{(m/s^{2})}$ & $10,059$ & 0,148     \\
+		$g^{(1)}\ \mathrm{(m/s^{2})}$ & $10,03$ & 0,15     \\
+		$g^{(2)}\ \mathrm{(m/s^{2})}$ & $10,06$ & 0,15     \\
 		$g_{0}\ \mathrm{(m/s^{2})}$   & $9,786$  &           \\
 		\hline
 	\end{tabular}
@@ -349,6 +349,39 @@ Por fim, a Figura \ref{fig:histogramas} contém os histogramas dos valores medid
 
 \newpage
 \section{DISCUSSÃO}
+
+Com base nos resultados desenvolvidos na seção anterior, é possível discutir a coerência dos ensaios conduzidos entre os cinco alunos, bem como compará-los com valores de referência pré-estabelecidos.
+
+Para o cronômetro de mão, as médias de 10 períodos distribuem-se com desvio padrão $0,06$ em torno da média de $11,74$, de modo que se espera que aproximadamente $95\%$ das médias calculadas encontrem-se no intervalo $[11,62;11,87]\ \text{s}$, correspondente uma meia largura de dois desvios padrão\cite{vuolo2019}. A largura dessa intervalo de confiabilidade corresponde a aproximadamente $2,13\%$ da média entre os alunos, indicando boa precisão e repitibilidade nos ensaios. Também, os desvios padrão dos conjuntos de medidas de cada um dos alunos distribuem-se todos na ordem de grandeza de $100\ \text{ms}$, a mesma do tempo de reação médio do ser-humano, que varia entre $100$ e $500\ \text{ms}$.
+
+A análise análoga pode ser feita para as medidas provenientes dos cronômetros de bancada, de onde obtém-se que aproximadamente $95\%$ das médias calculadas deve se encontrar no intervalo $[11,61; 11,83]\ \text{s}$. A largura dessa intervalo de confiabilidade corresponde a aproximadamente $1,88\%$ da média entre os alunos, indicando boa precisão e repitibilidade nos ensaios. Também, é possível extrair a conclusão análoga em relação aos desvios padrão obtidos por cada um dos alunos, uma vez que eles se distribuem no intervalo $[80, 150]\ \text{ms}$, todos da ordem de grandez de $100\ \text{ms}$, próximo de tempo de reação médio de um ser humano.
+
+
+Para comparar quantitativamente o ajuste do histograma experimental obtido com uma distribuição Gaussiana, pode-se comparar o desvio acumulado entre a distribuição Gaussiana e o histograma experimental com a variação acumulada do histograma em torno da média. Sendo $f_{hist}$ as frequências observadas experimentalmente e $f_{Gauss}$ as esperadas pela distribuição Gaussiana, a Equação \ref{eq:comp} exibe essa comparação\cite{barrosneto2001}.
+
+\begin{equation}\label{eq:comp}
+	q = \frac{\sum_{i}(f_{Gauss,i}-{f_{hist}})^2}{\sum_{i}(f_{hist, i}-\overline{f_{hist}})^2}
+\end{equation}
+
+Nesse cálculo, o coeficiente $q$ assume valor nulo se a distribuição ajusta perfeitamente os dados experimentais obtidos, enquanto seu valor se distancia de $0$ quando a distribuição proposta não ajusta bem os dados.
+
+A Figura \ref{fig:desvios} é uma representação gráfica para os desvios da distribuição Gaussiana em relação às observações experimentais para cada um dos cronômetros, dados por $\delta = f_{Gauss} - f_{hist}$.
+
+\begin{figure}[H]
+	\centering
+
+	\includegraphics[width = \linewidth]{desvios_histogramas.png}
+	\caption{À esquerda, desvios para as medições com cronômetro de bancada, $q = 0,0888$} À direita, desvios para as medições com cronômetro de mão, $q = 0,0945$.
+	\label{fig:desvios}
+\end{figure}
+
+Qualitativamente, a distribuição dos desvios não aparenta seguir qualquer padrão em ambos os gráficos da Figura \ref{fig:desvios}, coeretemente com o esperado para uma distribuição aleatória. Quantitativamente, a distribuição Gaussiana do cronômetro de bancada apresentou $q\approx 8,9\%$, enquanto a do cronômetro de mão apresentou $q \approx 9,5\%$, indicando que erro acumulado é significativamente menor que a variação em torno da média acumulada, ou seja, há uma boa concordância entre o histograma experimental a distribuição esperada para ambos os cronômetros.
+
+A diferença relativa entre o período médio obtido com o cronômetro de mão ($T^{(1)}$) e o período médio obtido com o cronômetro de bancada ($T^{(2)}$) será $e = \frac{|T^{(2)}-T^{(1)}|}{(T^{(1)}+T^{(2)})/2} \approx 0,17\%\ll 1$, indicando uma boa homogeneidade dos dados coletados entre os dois conjuntos relativos a cada um dos cronômetros. Ainda, essa hipótese é reforçada por meio da igualdade dos desvios padrão da média até, pelo menos, a segunda casa decimal, assim como mostra as Tabelas \ref{tab:medias_cm} e \ref{tab:medias_cb}.
+
+Por fim, é possível comparar os valores obtidos para aceleração da gravidade pelos ensaios conduzidos com cada um dos cronômetros. Novamente, pode-se calcular a diferença relativa entre os dois valores obtidos para a gravidade, dada por $e =\frac{|g^{(2)}-g^{(1)}|}{(g^{(1)}+g^{(2)})/2}\approx 0,34\%\ll 1$, resultado que é consequência da homogeneidade dos dados coletados entre os conjuntos de cada um dos cronômetros. Também, é possível calcular a diferença relativa ao valor de referência $g_0 = 9,786\ \text{m/s}^2$, dada por $e_i = |g^{(i)}-g_0|/g_0$. Para ambos os conjuntos de dados, essa diferença relativa resulta em, aproximadamente, $2,8\%$ até a primeira casa decimal, indicando uma boa concordância dos resultados obtidos com o valor de referência pré-estabelecido.
+
+
 \newpage
 
 \clearpage

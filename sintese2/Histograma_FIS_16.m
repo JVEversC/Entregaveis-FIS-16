@@ -38,7 +38,7 @@ for i = 1:length(arquivos)
     y_hist(i,:) = h.Values;
     x_hist(i,:) = (h.BinEdges(1:(end - 1)) + h.BinEdges(2:end)) * 0.5;
 
-    err(i,:) = y_hist(i,:) - norm(x_hist(i,:), n_exp, sigma_expec, data, h.BinWidth);
+    err(i,:) = - y_hist(i,:) + norm(x_hist(i,:), n_exp, sigma_expec, data, h.BinWidth);
 
     hold on;
 
@@ -65,7 +65,7 @@ end
 
 %Calculandos os coefs de determinação
 for i = 1:2
-    r2(i) = 1 - sum(err(i,:) .^ 2) / sum((y_hist(i,:) - mean(y_hist(i,:))).^2);
+    r2(i) = sum(err(i,:) .^ 2) / sum((y_hist(i,:) - mean(y_hist(i,:))).^2);
     disp(r2(i));
 end
 
@@ -82,7 +82,7 @@ for i = 1:2
     plot(x, nulo(x), '--');
     legend('Desvios', 'Desvio nulo', fontsize = 13);
     xlabel('$10T$ (s)', Interpreter='latex', FontSize=16);
-    ylabel('$f_{hist}-f_{Gauss}$', Interpreter='latex', FontSize=16);
+    ylabel('$f_{Gauss}-f_{hist}$', Interpreter='latex', FontSize=16);
     ylim([-6 6]);
 end
 
