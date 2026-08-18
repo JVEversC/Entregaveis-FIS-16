@@ -1,0 +1,360 @@
+\documentclass[12pt, a4paper, brazil]{article}
+\usepackage{fix-cm}
+
+\usepackage[a4paper,
+            top=3cm, bottom=2cm,
+            left=3cm, right=2cm]{geometry}
+
+\usepackage[num, overcite]{abntex2cite}
+\citebrackets[]
+\makeatletter
+\renewcommand\@biblabel[1]{[#1] }
+\makeatother
+
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{amsmath, amsfonts, amsthm, bm}
+\usepackage{newtxtext, newtxmath, mathtools}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{icomma}
+\usepackage{array}
+\usepackage{float}
+\usepackage{tikz}
+
+\usepackage{silence}
+\WarningFilter{latex}{Command \showhyphens has changed}
+
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.4\baselineskip}
+\justifying
+
+\usepackage{titlesec}
+
+\newcommand{\titlefix}{
+  \hyphenpenalty=10000
+  \exhyphenpenalty=10000
+  \emergencystretch=2em
+}
+
+\captionsetup{
+    justification=centering
+}
+
+\titleformat{\section}
+{\normalsize\bfseries\titlefix}
+{\thesection.}
+{0.5em}
+{}
+
+\titlespacing*{\section}
+{0.75cm}
+{1.5\baselineskip}
+{0.8\baselineskip}
+
+\titleformat{\subsection}
+{\normalsize\bfseries\titlefix}
+{\thesubsection.}
+{0.5em}
+{}
+
+\titlespacing*{\subsection}
+{1.5cm}
+{1.2\baselineskip}
+{0.6\baselineskip}
+
+\titleformat{\subsubsection}
+{\normalsize\bfseries\titlefix}
+{\thesubsubsection.}
+{0.5em}
+{}
+
+\titlespacing*{\subsubsection}
+{2.25cm}
+{1.0\baselineskip}
+{0.4\baselineskip}
+
+\titleformat{name=\section,numberless}
+{\normalsize\bfseries\centering\titlefix}
+{}
+{0em}
+{}
+
+\titlespacing*{name=\section,numberless}
+{0cm}
+{1.5\baselineskip}
+{0.8\baselineskip}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+
+	\includegraphics[width=0.3\textwidth]{ita_rgb.jpg}
+
+	\vfill
+
+	{\large\bfseries
+		Variáveis Contínuas e Distribuição Gaussiana\\[2.0\baselineskip]
+	}
+
+	\vfill
+
+	{\normalsize\bfseries
+		Caio Schaden Ishida\\[0.5\baselineskip]
+		Felipe Osternes da Silva\\[0.5\baselineskip]
+		João Victor Evers Cordeiro\\[0.5\baselineskip]
+		Paulo Vinícius Rodrigues Azevedo\\[0.5\baselineskip]
+		Rafael Sakata Suzuki\\[0.5\baselineskip]
+	}
+
+	\vfill
+
+	{\normalsize\bfseries
+		Grupo nº 01\\[0.6\baselineskip]
+		Turma 30.2
+	}
+
+	\vfill
+
+	{\normalsize
+		\textbf{Professores}\\[0.5\baselineskip]
+		Prof. Marco Antonio Ridenti (coord.)\\
+		Prof. Amós Silva\\
+		Profa. Sônia Guimarães\\
+		Prof. Filipe Matusalém\\
+		Prof. Bogos Sismanoglu\\[0.5\baselineskip]
+		Data de entrega: 20/08/2026
+	}
+
+	\vfill
+
+	{\normalsize\bfseries
+		Departamento de Física\\
+		Divisão de Ciências Fundamentais\\
+		Instituto Tecnológico de Aeronáutica - ITA
+	}
+
+\end{center}
+
+\newpage
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setcounter{page}{1}
+
+\section{OBJETIVOS}
+O objetivo principal desse experimento foi a determinação de um valor para a aceleração da gravidade local a partir do modelo
+teórico de um pêndulo simples, cujo período vale $2\pi \sqrt{\frac{l}{g}}$, comparando um valor de referência com os resultados
+obtidos em repetidas medições feitas com diferentes instrumentos, e a distribuição de frequências obtidas com uma distribuição
+de probabilidade Gaussiana
+
+
+\section{PROCEDIMENTO EXPERIMENTAL}
+Para cumprir o objetivo traçado minimizando as incertezas relativas, foram realizadas 200 medições do tempo de $10$ oscilações de um pêndulo simples composto por uma massa esférica presa a um suporte por um fio, totalizando em uma distância entre o centro de massa e o apoio no suporte de $l= (35,00\pm0,05)\ \text{cm}$, como mostra a Figura \ref{fig:pendulo}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\linewidth]{pendulo.jpeg}
+	\caption{Arranjo experimental utilizado para a determinação da gravidade}
+	\label{fig:pendulo}
+\end{figure}
+
+Para coleta dos dados, utilizou-se dois tipos de instrumentos, um cronômetro de bancada da marca Cidepe e um cronômetro de mão da marca CASIO, assim como mostra a Figura \ref{fig:cronom}. Cada aluno coletou 40 medidas, 20 no cronômetro de mão e 20 no cronômetro de bancada, totalizando 100 medições em cada instrumento.
+
+\begin{figure}[H]
+	\centering
+
+	\begin{subfigure}[b]{0.66\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cronom_mesa.jpeg}
+		\caption{Cronômetro de mesa}
+		\label{fig:sub_a}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.30\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cronom_mao.jpeg}
+		\caption{Cronômetro de mão}
+		\label{fig:sub_b}
+	\end{subfigure}
+
+	\caption{Instrumentos de medição utilizados}
+	\label{fig:cronom}
+\end{figure}
+
+\section{RESULTADOS}
+A Tabela \ref{tab:medições_cm} e \ref{tab:medições_cb}
+contém as medições de cada aluno do período de $10$ oscilações do pêndulo utilizando cronômetro de mão e de bancada, respectivamente.
+\begin{table}[H]
+
+	\centering
+	\caption{Medidas com cronômetro de mão do período de 10 oscilações}
+	\begin{tabular}{c c c c c c}
+		\hline
+		\#Experimento & ${10T_{1}}\ \mathrm{(s)}$ & ${10T_{2}}\ \mathrm{(s)}$ & ${10T_{3}}\ \mathrm{(s)}$ & ${10T_{4}}\ \mathrm{(s)}$\  & ${10T_{5}}\ \mathrm{(s)}$ \\ [0.5ex]
+		\hline
+		1             & 11,86                     & 11,81                     & 11,74                     & 11,78                       & 11,81                     \\
+		2             & 12,02                     & 11,80                     & 11,69                     & 11,83                       & 11,73                     \\
+		3             & 11,95                     & 11,74                     & 11,69                     & 11,85                       & 11,72                     \\
+		4             & 11,84                     & 11,53                     & 11,85                     & 11,57                       & 11,76                     \\
+		5             & 11,78                     & 11,70                     & 11,86                     & 11,68                       & 11,72                     \\
+		6             & 11,81                     & 11,84                     & 11,76                     & 11,67                       & 11,69                     \\
+		7             & 11,90                     & 11,80                     & 11,85                     & 11,78                       & 11,76                     \\
+		8             & 11,75                     & 11,77                     & 11,46                     & 11,77                       & 11,69                     \\
+		9             & 11,85                     & 11,96                     & 11,88                     & 11,66                       & 11,75                     \\
+		10            & 11,86                     & 11,67                     & 11,64                     & 11,67                       & 11,69                     \\
+		11            & 11,89                     & 11,90                     & 11,51                     & 11,56                       & 11,78                     \\
+		12            & 11,85                     & 11,95                     & 11,54                     & 11,53                       & 11,79                     \\
+		13            & 11,88                     & 11,75                     & 11,60                     & 11,69                       & 11,85                     \\
+		14            & 11,82                     & 11,85                     & 11,80                     & 11,67                       & 11,87                     \\
+		15            & 11,98                     & 11,52                     & 11,37                     & 11,79                       & 11,72                     \\
+		16            & 11,69                     & 11,52                     & 11,48                     & 11,70                       & 11,68                     \\
+		17            & 11,91                     & 11,57                     & 11,81                     & 11,80                       & 11,80                     \\
+		18            & 11,78                     & 11,69                     & 11,64                     & 11,71                       & 11,82                     \\
+		19            & 11,72                     & 11,57                     & 11,82                     & 11,59                       & 11,84                     \\
+		20            & 11,79                     & 11,72                     & 11,76                     & 11,70                       & 11,54                     \\
+		\hline
+	\end{tabular}
+	\label{tab:medições_cm}
+\end{table}
+
+\begin{table}[H]
+
+	\centering
+	\caption{Medidas com cronômetro de bancada do período de 10 oscilações}
+	\begin{tabular}{c c c c c c}
+		\hline
+		\#Experimento & ${10T_{1}}\ \mathrm{(s)}$ & ${10T_{2}}\ \mathrm{(s)}$ & ${10T_{3}}\ \mathrm{(s)}$ & ${10T_{4}}\ \mathrm{(s)}$\  & ${10T_{5}}\ \mathrm{(s)}$ \\ [0.5ex]
+		\hline
+		1             & 11,577                    & 11,902                    & 11,760                    & 11,659                      & 11,606                    \\
+		2             & 11,501                    & 11,750                    & 11,846                    & 11,940                      & 11,631                    \\
+		3             & 11,790                    & 11,737                    & 11,852                    & 11,676                      & 11,661                    \\
+		4             & 11,631                    & 11,582                    & 11,926                    & 11,534                      & 11,661                    \\
+		5             & 11,730                    & 11,540                    & 11,994                    & 11,577                      & 11,729                    \\
+		6             & 11,729                    & 11,779                    & 11,959                    & 11,556                      & 11,764                    \\
+		7             & 11,679                    & 11,617                    & 11,955                    & 11,772                      & 11,761                    \\
+		8             & 11,655                    & 11,765                    & 11,763                    & 11,666                      & 11,972                    \\
+		9             & 11,684                    & 11,949                    & 11,898                    & 11,655                      & 11,750                    \\
+		10            & 11,887                    & 11,701                    & 11,780                    & 11,775                      & 11,430                    \\
+		11            & 11,677                    & 11,835                    & 11,761                    & 11,614                      & 11,820                    \\
+		12            & 11,613                    & 11,996                    & 11,759                    & 11,614                      & 11,800                    \\
+		13            & 11,611                    & 11,815                    & 11,719                    & 11,594                      & 11,669                    \\
+		14            & 11,759                    & 11,728                    & 11,750                    & 11,584                      & 11,738                    \\
+		15            & 11,720                    & 11,574                    & 11,759                    & 11,620                      & 11,702                    \\
+		16            & 11,623                    & 11,415                    & 11,799                    & 11,843                      & 11,553                    \\
+		17            & 11,598                    & 11,487                    & 11,783                    & 11,753                      & 11,856                    \\
+		18            & 11,613                    & 11,609                    & 11,625                    & 11,795                      & 11,757                    \\
+		19            & 11,676                    & 11,704                    & 11,780                    & 11,633                      & 11,743                    \\
+		20            & 11,720                    & 11,678                    & 11,719                    & 11,694                      & 11,820                    \\
+		\hline
+	\end{tabular}
+	\label{tab:medições_cb}
+\end{table}
+
+As Tabelas \ref{tab:medias_cm} e \ref{tab:medias_cb}
+contém a média do período e o desvio padrão associado das medições de cada aluno utilizando cronômetro de mão e de bancada, respectivamente.
+
+\begin{table}[H]
+	\centering
+	% Primeira Tabela (lado esquerdo)
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\caption{Média e desvio padrão das medições com cronômetro de mão}
+		\begin{tabular}{c c c}
+			\hline
+			Aluno & $\overline{10T}\ \mathrm{(s)}$ & $\sigma\ \mathrm{(s)}$ \\ [0.5ex]
+			\hline
+			1     & 11,84                          & 0,08                   \\
+			2     & 11,73                          & 0,14                   \\
+			3     & 11,69                          & 0,15                   \\
+			4     & 11,70                          & 0,09                   \\
+			5     & 11,75                          & 0,08                   \\
+			\hline
+			Total & 11,74                          & 0,12                   \\
+			\hline
+		\end{tabular}
+		\label{tab:medias_cm}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\caption{Média e desvio padrão com cronômetro de bancada}
+		\begin{tabular}{c c c}
+			\hline
+			Aluno & $\overline{10T}\ \mathrm{(s)}$ & $\sigma\ \mathrm{(s)}$ \\ [0.5ex]
+			\hline
+			1     & 11,67                          & 0,08                   \\
+			2     & 11,71                          & 0,15                   \\
+			3     & 11,81                          & 0,09                   \\
+			4     & 11,68                          & 0,11                   \\
+			5     & 11,72                          & 0,12                   \\
+			\hline
+			Total & 11,72                          & 0,12                   \\
+			\hline
+		\end{tabular}
+		\label{tab:medias_cb}
+	\end{minipage}
+\end{table}
+
+A Tabela \ref{tab:resultados} contém os valores e incertezas finais dos períodos medidos utilizando cronômetro de mão ($T^{(1)}$) e de bancada ($T^{(2)}$), as estimativas obtidas da aceleração da gravidade local ($g^{(1)}$ e $g^{(2)}$, respectivamente), e o valor de referência da aceleração local da gravidade $g_{0}$
+
+\begin{table}[H]
+	\centering
+	\caption{Valores e incertezas finais dos períodos medidos utilizando cronômetro de mão ($T^{(1)}$) e de bancada ($T^{(2)}$), as estimativas experimentais da aceleração da gravidade local associadas ($g^{(1)}$ e $g^{(2)}$, respectivamente), e o valor de referência da aceleração local da gravidade $g_{0}$}
+	\begin{tabular}{l l l}
+		\hline
+		Grandeza                      & Valor    & Incerteza \\[0.5ex]
+		\hline
+		$T^{(1)}\ \mathrm{(s)}$       & $1,174$  & 0,012     \\
+		$T^{(2)}\ \mathrm{(s)}$       & $1,172$  & 0,012     \\
+		$g^{(1)}\ \mathrm{(m/s^{2})}$ & $10,025$ & 0,148     \\
+		$g^{(2)}\ \mathrm{(m/s^{2})}$ & $10,059$ & 0,148     \\
+		$g_{0}\ \mathrm{(m/s^{2})}$   & $9,786$  &           \\
+		\hline
+	\end{tabular}
+	\label{tab:resultados}
+\end{table}
+
+Por fim, a Figura \ref{fig:histogramas} contém os histogramas dos valores medidos para os cronômetros de mesa e bancada comparados aos valores teóricos esperados para uma distribuição Gaussiana com desvios padrão calculados por meio de .
+
+\begin{figure}[H]
+	\centering
+	\caption{Histogramas de frequência das medidas}
+	\label{fig:histogramas}
+
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{figura_cb.png}
+		\caption{Histograma para os valores obtidos com o cronômetro de bancada}
+		\label{fig:sub_a}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.6\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figura_cm.png}
+		\caption{Histograma para os valores obtidos com o cronômetro de mão}
+		\label{fig:sub_b}
+	\end{subfigure}
+\end{figure}
+
+\newpage
+\section{DISCUSSÃO}
+\newpage
+
+\clearpage
+\renewcommand{\refname}{}
+\section{REFERÊNCIAS}
+\vspace{-1.5\baselineskip}
+\bibliography{referencias_sintese2}
+
+\end{document}

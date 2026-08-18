@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt, a4paper, brazil]{article}
 \usepackage{fix-cm}
 
 \usepackage[a4paper,
@@ -10,8 +10,6 @@
 \makeatletter
 \renewcommand\@biblabel[1]{[#1] }
 \makeatother
-
-
 
 \usepackage{subcaption}
 \usepackage{booktabs}
@@ -155,62 +153,141 @@
 \renewcommand{\headrulewidth}{0pt}
 \setcounter{page}{1}
 
-\section{Objetivos}
-O objetivo principal desse experimento foi a comparação dos valores previstos pelo modelo teórico de uma distribuição de probabilidade binomial
-com os dados obtidos após sucessivos ensaios de Bernoulli,
+\section{OBJETIVOS}
+O objetivo principal desse experimento foi a comparação e análise dos valores previstos pelo modelagem do resultado de lançamentos sucessivos de dados como uma distribuição de probabilidade binomial com os valores numéricos obtidos após repetidos ensaios de Bernoulli. Na modelagem desse problema, a probabilidade de sucesso será $p = \frac{1}{6}$, correspondente à probabilidade de obter a face específica do dado que está pintada de azul, enquanto a de fracasso será $(1 - p) = 5/6$. Sendo assim, a probabilidade de obter $n$ faces azuis em $N$ lançamentos é dada pela distribuição binomial da Equação \ref{eq:distbin}\cite{vuolo2019}.
 
-\newpage
+\begin{equation}\label{eq:distbin}
+	P(n) = \binom{N}{n}p^n(1-p)^{N-n}
+\end{equation}
 
-\section{Procedimento experimental}
-Foram utilizados 24 dados cúbicos não-enviesados e cada dado possuía cinco faces vermelhas e uma face azul. Cada estudante realizou 20 lançamentos desse conjunto de dados sobre uma caixa de papelão grande, totalizando 100 lançamentos. Após cada lançamento, foi contabilizada a quantidade de dados cujas faces azuis estavam viradas para cima. 
-\newpage
+\section{PROCEDIMENTO EXPERIMENTAL}
+Foram utilizados 24 dados cúbicos não-enviesados, cada um com 5 faces vermelhas e 1 azul. Cada integrante do grupo realizou 20 lançamentos desse conjunto de dados com uma caixa de papelão sobre outra caixa maior, totalizando 100 lançamentos. Para cada um dos 100 lançamentos de 24 dados foi contabilizada a quantidade de faces azuis obtidas (casos de sucesso). 
 
-\section{Resultados}
-	A Tabela \ref{tabela:experimentos} mostra a quantidade de vezes que a face azul aparece em cada experimento.
-\begin{table}[h!]
-\centering
-\begin{tabular}{c c c c c c} 
- \hline
- experimento & aluno 1 & aluno 2 & aluno 3 & aluno 4 & aluno 5 \\ [0.5ex] 
- \hline
- 1 & 5 & 3 & 3 & 3 & 2\\
-2 & 4 & 8 & 0 & 4 & 4\\
-3 & 5 & 3 & 5 & 1 & 3\\
-4 & 1 & 4 & 4 & 7 & 6\\
-5 & 4 & 5 & 7 & 3 & 4\\
-6 & 2 & 5 & 4 & 3 & 4\\
-7 & 1 & 3 & 4 & 5 & 4\\
-8 & 3 & 3 & 2 & 7 & 4\\
-9 & 6 & 4 & 6 & 2 & 2\\
-10 & 4 & 5 & 5 & 7 & 4\\
-11 & 5 & 2 & 5 & 3 & 4\\
-12 & 2 & 4 & 4 & 5 & 3\\
-13 & 5 & 2 & 6 & 6 & 3\\
-14 & 3 & 5 & 2 & 3 & 4\\
-15 & 10 & 4 & 3 & 6 & 1\\
-16 & 8 & 6 & 3 & 3 & 5\\
-17 & 2 & 3 & 6 & 3 & 3\\
-18 & 3 & 2 & 4 & 1 & 2\\
-19 & 3 & 1 & 3 & 5 & 3\\
-20 & 4 & 3 & 4 & 7 & 2\\ [1ex] 
- \hline
-\end{tabular}
-\caption{Número de vezes em que foram observados os resultados “face
-azul” em um lançamento de 24 dados de cinco faces vermelhas e uma
-azul. A primeira coluna designa o número do lançamento e as colunas
-ao lado o resultado observado pelo aluno.}
-\label{tabela:experimentos}
+\section{RESULTADOS}
+
+A Tabela \ref{tab:experimentos} registra a quantidade de faces azuis obtidas em cada um dos experimentos organizada com base nos resultados dos vinte lançamentos de cada um dos cinco alunos.
+
+\begin{table}[ht!]
+	\centering
+
+	\caption{Número de vezes em que foram observados os resultados “face
+		azul” em um lançamento de 24 dados de cinco faces vermelhas e uma
+		azul. A primeira coluna designa o número do lançamento e as colunas
+		ao lado o resultado observado pelo aluno.}
+
+	\begin{tabular}{c c c c c c}
+		\hline
+		Experimento & Aluno 1 & Aluno 2 & Aluno 3 & Aluno 4 & Aluno 5 \\
+		\hline
+		1           & 5       & 3       & 3       & 3       & 2       \\
+		2           & 4       & 8       & 0       & 4       & 4       \\
+		3           & 5       & 3       & 5       & 1       & 3       \\
+		4           & 1       & 4       & 4       & 7       & 6       \\
+		5           & 4       & 5       & 7       & 3       & 4       \\
+		6           & 2       & 5       & 4       & 3       & 4       \\
+		7           & 1       & 3       & 4       & 5       & 4       \\
+		8           & 3       & 3       & 2       & 7       & 4       \\
+		9           & 6       & 4       & 6       & 2       & 2       \\
+		10          & 4       & 5       & 5       & 7       & 4       \\
+		11          & 5       & 2       & 5       & 3       & 4       \\
+		12          & 2       & 4       & 4       & 5       & 3       \\
+		13          & 5       & 2       & 6       & 6       & 3       \\
+		14          & 3       & 5       & 2       & 3       & 4       \\
+		15          & 10      & 4       & 3       & 6       & 1       \\
+		16          & 8       & 6       & 3       & 3       & 5       \\
+		17          & 2       & 3       & 6       & 3       & 3       \\
+		18          & 3       & 2       & 4       & 1       & 2       \\
+		19          & 3       & 1       & 3       & 5       & 3       \\
+		20          & 4       & 3       & 4       & 7       & 2       \\
+		\hline
+	\end{tabular}
+	\label{tab:experimentos}
+
 \end{table}
 
+São calculados e registrados na Tabela \ref{tab:medias} os desvios padrão e as médias\cite{vuolo2019}
+referentes ao conjuntos de dados obtidos por cada um dos cinco alunos e ao conjunto de dados total.
+
+\begin{table}[H]
+
+	\centering
+	\caption{Média e desvio padrão dos resultados dos vinte lançamentos
+		de cada aluno, e média e desvio padrão contabilizando todos os
+		lançamentos. A tabela também mostra o valor esperado $x_0$ e $\sigma_0$ de
+		uma distribuição binomial, que são $x_0 = Np$ e
+		$\sigma_0 = \sqrt{Np(1-p)}$, com $p = 1/6$ e $N=24$.}
+	\begin{tabular}{c c c}
+		\hline
+		Aluno    & $\bar{x}$ & $\sigma$ \\ [0.5ex]
+		\hline
+		1        & 4,00      & 2,22     \\
+		2        & 3,75      & 1,62     \\
+		3        & 4,00      & 1,65     \\
+		4        & 4,20      & 1,99     \\
+		5        & 3,35      & 1,18     \\
+		\hline
+		Total    & 3,86      & 1,76     \\
+		Esperado & 4,00      & 1,80     \\
+		\hline
+	\end{tabular}
+	\label{tab:medias}
+\end{table}
+
+A Figura \ref{fig:histograma} é o histograma que compara a contagem experimental das faces azuis com os valores teóricos esperados para uma distribuição binomial, segundo a Equação \ref{eq:distbin}.
+
+\begin{figure}[H]
+	\centering
+	\caption{Histograma da frequência de ocorrência de $n$ “faces azuis”.
+		Os pontos em preto são os valores esperados de uma distribuição
+		binomial com $p = 1/6$.}
+	\includegraphics[width=\textwidth]{Histograma_v3.png}
+	\label{fig:histograma}
+\end{figure}
+
+\newpage
+\section{DISCUSSÃO}
+
+Com base nos resultados apresentados na seção anterior, é possível comparar os resultados obtidos pelos diferentes estudantes e avaliá-los em relação aos valores previstos pelo modelo de distribuição binomial. A Tabela~\ref{tab:mediasepm} apresenta, para cada estudante, a média $\bar{x}$, o desvio padrão e a diferença entre a média experimental e o valor esperado, em unidades do desvio padrão esperado, denotado por $\sigma_0$. Esse valor será utilizado para descrever, de maneira aproximada, o quão próximos os valores da média estão do esperado.\cite{vuolo2019}
+
+\begin{table}[H]
+
+\centering
+\caption{Média, desvio padrão e erro dos resultados de cada aluno, de todo o grupo e dos valores esperados.}
+\begin{tabular}{c c c c}
+	\hline
+	Aluno    & $\bar{x}$ & $\mathrm{\sigma}$ & $\left(\bar{x}-x_0\right)/\mathrm{\sigma}_0$ \\ [0.5ex]
+	\hline
+	1        & 4,00      & 2,22          & 0,00   \\
+	2        & 3,75      & 1,62          & $-$0,14 \\
+	3        & 4,00      & 1,65          & 0,00   \\
+	4        & 4,20      & 1,99          & 0,11   \\
+	5        & 3,35      & 1,18          & $-$0,36 \\ 
+
+	\hline
+
+	Total    & 3,86      & 1,76          & $-$0,08 \\
+	Esperado & 4,00      & 1,83          & --   \\ 
+
+	\hline
+\end{tabular}
+\label{tab:mediasepm}
+
+\end{table}
+
+Os valores experimentais de $\bar{x}$ apresentam boa concordância com o valor esperado. As médias dos alunos 1 e 3 coincidem com o valor esperado, enquanto as médias dos alunos 2, 4 e 5 diferem de $x_0$ em, respectivamente, $-0,14$, $+0,11$ e $-0,36$ unidades de $\mathrm{\sigma}_0$. Para o conjunto dos estudantes, obtém-se $\bar{x}=3,86$, correspondendo a uma diferença de $-0,08$ unidades de $\mathrm{\sigma}_0$ em relação ao valor esperado. Portanto, observa-se uma boa concordância entre os resultados experimentais e a previsão do modelo.
+
+A dispersão dos resultados também apresenta valores próximos da previsão teórica. Os valores de $\sigma$ obtidos para os estudantes variam entre $1,18$ e $2,22$, enquanto o valor esperado é $1,83$. Logo, os valores experimentais não apresentam discrepâncias acentuadas em relação ao valor esperado.
+
+Além disso, observa-se pela Figura~\ref{fig:histograma} que a distribuição experimental apresenta boa concordância qualitativa com a previsão teórica da distribuição binomial, evidenciando o comportamento esperado para o experimento.
+
+Por fim, para verificar se a concordância observada entre os valores de $\bar{x}$ e o valor teórico pode ser atribuída ao comportamento esperado da distribuição, e não apenas a uma coincidência, pode-se comparar a distribuição dos resultados experimentais com a distribuição teórica, utilizando os desvios padrão como uma medida simples dessa comparação, como realizado neste trabalho. Para uma análise estatística mais precisa, pode-se realizar um teste de hipótese para a média. Nesse caso, a hipótese nula $H_0$ seria de que a média obtida é compatível com o valor teórico $x_0$, enquanto a hipótese alternativa $H_1$ seria de que existe uma diferença significativa entre esses valores. A partir do valor $p$, um número que mede a chance de um resultado de teste acontecer por puro acaso, seria possível avaliar se a diferença observada é suficientemente grande para rejeitar $H_0$ ou se pode ser atribuída às flutuações estatísticas esperadas.\cite{assis2020}
 \newpage
 
-\section{Discussão}
-
-\newpage
-
-\section{Referências bibliográficas}
-%\begingroup
-%\bibliography{referencias_sintese1}
-%\endgroup
+\clearpage
+\renewcommand{\refname}{}
+\section{REFERÊNCIAS}
+\vspace{-1.5\baselineskip}
+\bibliography{referencias_sintese1}
 
 \end{document}
+
